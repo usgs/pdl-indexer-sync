@@ -35,7 +35,7 @@ $db_user = null;
 $delta = 86400;
 $endtime = time();
 $reference_host = 'localhost';
-$reference_directory = '/data/www/data/PDL/indexer_storage/';
+$reference_directory = '/data/www/data/PDL/indexer_storage';
 $starttime = null;
 
 for ($i = 1, $len = count($argv); $i < $len; $i++) {
@@ -189,13 +189,13 @@ $reference_dbh = null;
  *     array keyed product directory.
  */
 function getIds ($arr) {
-  global $reference_dir;
+  global $reference_directory;
 
   $ids = array();
 
   foreach ($arr as $value) {
-    $key = $reference_dir .
-        implode(DIRECTORY_SEPARATOR, array(
+    $key = implode(DIRECTORY_SEPARATOR, array(
+          $reference_directory,
           $value['type'],
           $value['code'],
           $value['source'],
