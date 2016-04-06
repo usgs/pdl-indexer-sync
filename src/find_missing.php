@@ -244,9 +244,9 @@ function printUsage () {
           ' [--db-name=product_index]' .
           ' --db-pass=DBPASS' .
           ' --db-user=DBUSER' .
-          ' [--delta=86400]'
+          ' [--delta=86400]' .
           ' [--endtime=NOW]' .
-          ' [--reference-directory=/data/www/data/PDL/indexer_storage]'
+          ' [--reference-directory=/data/www/data/PDL/indexer_storage]' .
           ' [--reference-host=localhost]' .
           ' --starttime=STARTTIME',
       '',
@@ -266,7 +266,7 @@ function printUsage () {
       '--endtime',
       '    Time of last product to compare.',
       '    Default is current time.',
-      '    Anything `strtotime` supports (e.g. YYYY-MM-DD).'
+      '    Anything `strtotime` supports (e.g. YYYY-MM-DD).',
       '--reference-directory',
       '    Directory where products are located.',
       '--reference-host',
@@ -274,7 +274,7 @@ function printUsage () {
       '    Default "localhost".',
       '--starttime',
       '    Time of the first product to compare.',
-      '    Anything `strtotime` supports (e.g. YYYY-MM-DD).'
+      '    Anything `strtotime` supports (e.g. YYYY-MM-DD).',
       // add extra blank line
       '')) . PHP_EOL);
   fclose($stderr);
